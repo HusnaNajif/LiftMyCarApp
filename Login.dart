@@ -47,7 +47,7 @@ class _LoginState extends State<Login> {
     });
 
     final User? firebaseUser=(
-        await fauth.createUserWithEmailAndPassword(
+        await fauth.signInWithEmailAndPassword(
             email: emailcontroller.text.trim(),
             password: passwordcontroller.text.trim()).then((value) {
          print("login successfull");
